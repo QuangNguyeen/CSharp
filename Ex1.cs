@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -122,6 +122,16 @@ namespace OOP_Exercise1
             this.reader = reader;
             listBorrowedBook = new List<Book>();
         }
+        // getter
+        public List<Book> GetListBook()
+        {
+            return listBorrowedBook;
+        }
+
+        public Reader GetReader()
+        {
+            return reader;
+        }
         public void Input(List<Book> listBook, int n)
         {
             for (int i = 0; i < n; i++)
@@ -192,9 +202,37 @@ namespace OOP_Exercise1
                 }
             }
         }
+
+        public int CountBook()
+        {
+            return listBorrowedBook.Count();
+        }
     }
     internal class Ex1
-    {   
+    {
+        public static void SortManagement(List<BookBorrowingManager> listManagers)
+        {
+            var listSize = listManagers.Count;
+            for (int i = 0; i < listSize - 1; i++)
+            {
+                var max = i;
+                for (int j = i + 1; j < listSize; j++)
+                {
+                    if (listManagers[j].CountBook() > listManagers[max].CountBook())
+                    {
+                        max = j;
+                    }
+                }
+
+                if (max != i)
+                {
+                    BookBorrowingManager temp = listManagers[i];
+                    listManagers[i] = listManagers[max];
+                    listManagers[max] = temp;
+
+                }
+            }
+        }
         public static void Main(string[] args)
         {
             List<Reader> listReader = new List<Reader>();
@@ -243,13 +281,15 @@ namespace OOP_Exercise1
                 temp.Input(listBook, number);
                 listManagers.Add(temp);
             }
+
+            // Sort List Management By The Number Borrowed Books
+            SortManagement(listManagers);
             Console.WriteLine("\nDisplay Management Information: ");
             foreach (var borrowingManager in listManagers)
             {
                 borrowingManager.Output();
                 Console.WriteLine("\n");
             }
-            
         }
     }
 }
