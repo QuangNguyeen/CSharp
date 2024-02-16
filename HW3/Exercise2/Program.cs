@@ -31,7 +31,7 @@ public class Program
     {
         foreach (var railcar in ListRailcar)
         {
-            railcar.DisplayInfo();
+            railcar.DisplayInfor();
         }
     }
     
