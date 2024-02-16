@@ -78,23 +78,25 @@ public class Program
                 }
                 case Choice.SaleOff:
                 {
-                    int level = 0;
+                    double level;
                     Console.WriteLine("Enter the ID of the discounted item: ");
                     string id = Console.ReadLine();
                     Boolean checkExist = false;
                     foreach (var item in ListItem)
                     {
-                        if (id.Equals(item.ID))
+                        if (id != null)
                         {
-                            checkExist = true;
-                            do
+                            if (id.Equals(item.ID))
                             {
-                                Console.WriteLine("Enter the discount level: ");
-                                level = Convert.ToInt32(Console.ReadLine());
-                            } while (level <= 0 || level >= 100);
-                            level /= 100;
-                            Console.WriteLine($"NewPrice: {item.RetailPrice * level}");
-                            break;
+                                checkExist = true;
+                                do
+                                {
+                                    Console.WriteLine("Enter the discount level: ");
+                                    level = Convert.ToDouble(Console.ReadLine()) / 100 ;
+                                } while (level <= 0 || level >= 100);
+                                Console.WriteLine($"NewPrice: {item.RetailPrice * (1-level)}");
+                                break;
+                            }
                         }
                     }
 
