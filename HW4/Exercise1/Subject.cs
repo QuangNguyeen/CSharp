@@ -9,13 +9,13 @@ public class Subject
     //
     public string IdSubject
     {
-        get => _idSubject;
+        get => _idSubject ?? throw new InvalidOperationException("Subject ID is invalid.");
         set => _idSubject = value;
     }
 
     public string NameSubject
     {
-        get => _nameSubject;
+        get => _nameSubject ?? throw new InvalidOperationException("Subject Name is invalid.");
         set => _nameSubject = value;
     }
 
@@ -35,29 +35,39 @@ public class Subject
     {
         try
         {
-            if (File.Exists(filePath))
-            {
-                Subject newSubject = new Subject();
                 Console.WriteLine("Enter Subject ID: ");
-                newSubject.IdSubject = Console.ReadLine();
+                string? id  = Console.ReadLine();
+                IdSubject = id ?? "000000";          // default is 000000
                 Console.WriteLine("Enter Subject Name: ");
-                newSubject.NameSubject = Console.ReadLine();
+                string? name = Console.ReadLine();
+                NameSubject = name ?? "defaultName"; // default is defaultName
                 Console.WriteLine("Enter Process Coefficient: ");
-                newSubject.ProcessCoefficient = Convert.ToDouble(Console.ReadLine());
-                newSubject.ExamCoefficient = 100 - newSubject.ProcessCoefficient;
-                FileStream stream = new FileStream(filePath, FileMode.Open);
-                using (StreamWriter writer = new StreamWriter(stream))
-                {
-                    writer.WriteLine($"SubjectID|{newSubject.IdSubject}");
-                    writer.WriteLine($"Subject|{newSubject.NameSubject}");
-                    writer.WriteLine($"F|{newSubject.ProcessCoefficient}|{newSubject.ExamCoefficient}");
-                }
-            }
+                ProcessCoefficient = Convert.ToDouble(Console.ReadLine());
+                ExamCoefficient = 100 - ProcessCoefficient;
+                UpdateFileData(this,filePath);
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error: {ex.Message}");
         }
+        
     }
 
+    public static void UpdateFileData(Subject newSubject, string filePath)
+    {
+        try
+        {
+            var stream = new FileStream(filePath, FileMode.OpenOrCreate);
+            using (var writer = new StreamWriter(stream))
+            {
+                writer.WriteLine($"SubjectID|{newSubject.IdSubject}");
+                writer.WriteLine($"Subject|{newSubject.NameSubject}");
+                writer.WriteLine($"F|{newSubject.ProcessCoefficient}|{newSubject.ExamCoefficient}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating data in file: {ex.Message}");
+        }
+    }
 }
