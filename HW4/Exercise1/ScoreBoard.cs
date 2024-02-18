@@ -7,20 +7,21 @@ public class ScoreBoard
     private string? _semester;
     private int _quantityStudent;
     // 
-    public Subject Cousre
+    public Subject Course
     {
-        get => _subject;
+        get => _subject ?? throw new InvalidOperationException("Subject is not initialized."); 
         set => _subject = value;
     }
+    
     public List<StudentScore>? ListStudent
     {
         get => _listStudent;
         set => _listStudent = value;
     }
-
+    
     public string Semester
     {
-        get => _semester;
+        get => _semester ?? throw new InvalidOperationException("Semester is not initialized.");
         set => _semester = value;
     }
 
@@ -32,6 +33,7 @@ public class ScoreBoard
     // Constructor
     public ScoreBoard(string filePath)
     {
+        Course = new Subject();
         if (File.Exists(filePath))
         {
             ReadFormFile(filePath);
@@ -41,11 +43,12 @@ public class ScoreBoard
             CreatFile(filePath);
         }
     }
+
     private void CreatFile(string filePath)
     {
         try
         {
-            Input(filePath);
+            using (var newFile = new FileStream(filePath, FileMode.CreateNew));
         }
         catch (Exception ex)
         {
@@ -56,28 +59,31 @@ public class ScoreBoard
     {
         try
         {
-            string Line = File.ReadLines(filePath).First();
-            string[] parts = Line.Split('|');
-            Cousre.IdSubject = parts[1];
+            FileInfo info = new FileInfo(filePath);
+            if (info.Length != 0)
+            {
+                string line = File.ReadLines(filePath).First();
+                string[] parts = line.Split('|');
+                Course.IdSubject = parts[1];
             
-            Line = File.ReadLines(filePath).Skip(1).First();
-            parts = Line.Split('|');
-            Cousre.NameSubject = parts[1];
+                line = File.ReadLines(filePath).Skip(1).First();
+                parts = line.Split('|');
+                Course.NameSubject = parts[1];
 
-            Line = File.ReadLines(filePath).Skip(2).First();
-            parts = Line.Split('|');
-            Cousre.ProcessCoefficient = Convert.ToDouble(parts[1]);
+                line = File.ReadLines(filePath).Skip(2).First();
+                parts = line.Split('|');
+                Course.ProcessCoefficient = Convert.ToDouble(parts[1]);
 
-            Cousre.ExamCoefficient = 100 - Cousre.ProcessCoefficient;
+                Course.ExamCoefficient = 100 - Course.ProcessCoefficient;
 
-            Line = File.ReadLines(filePath).Skip(3).First();
-            parts = Line.Split('|');
-            Semester = parts[1];
+                line = File.ReadLines(filePath).Skip(3).First();
+                parts = line.Split('|');
+                Semester = parts[1];
 
-            Line = File.ReadLines(filePath).Skip(4).First();
-            parts = Line.Split('|');
-            QuantityStudent = Convert.ToInt32(parts[1]);
-
+                line = File.ReadLines(filePath).Skip(4).First();
+                parts = line.Split('|');
+                QuantityStudent = Convert.ToInt32(parts[1]);
+            }
         }
         catch (Exception ex)
         {
@@ -87,17 +93,22 @@ public class ScoreBoard
 
     public void Input(string filePath)
     {
-        Cousre.Input(filePath);
+        Course.Input(filePath);
         Console.WriteLine("Enter Semester: ");
-        Semester = Console.ReadLine();
+        string? semester = Console.ReadLine();
+        Semester = semester ?? "000000";                // default is 000000
         Console.WriteLine("Enter Quantity Students: ");
         QuantityStudent = Convert.ToInt32(Console.ReadLine());
-        FileStream stream = new FileStream(filePath, FileMode.Open);
-        using (StreamWriter writer = new StreamWriter(stream))
+        ScoreBoard.UpdateFileData(this,filePath);
+    }
+    public static void UpdateFileData(ScoreBoard newScoreBoard, string filePath)
+    {
+        Subject.UpdateFileData(newScoreBoard.Course,filePath);
+        var stream = new FileStream(filePath, FileMode.Append);
+        using (var writer = new StreamWriter(stream))
         {
-            writer.WriteLine($"Semester|{Semester}");
-            writer.WriteLine($"StudentCount|{QuantityStudent}");
+            writer.WriteLine($"Semester|{newScoreBoard.Semester}");
+            writer.WriteLine($"StudentCount|{newScoreBoard.QuantityStudent}");
         }
-        
     }
 }
