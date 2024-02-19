@@ -4,7 +4,36 @@ public class ScoreManagement
 {
     public static void Main(string[] args)
     {
-        ScoreBoard temp = new ScoreBoard("/Users/macbook/Documents/C#/HW4/Exercise1/data.txt");
-        temp.Input("/Users/macbook/Documents/C#/HW4/Exercise1/data.txt");
+        int choice;
+        do
+        {
+            DisplayMenu();
+            choice = Convert.ToInt32(Console.ReadLine());
+            switch ((Option)choice)
+            {
+                case Option.AddNewScoreBoard:
+                {
+                    AddNewScoreBoard();
+                    break;
+                }
+                case Option.AddScore:
+                {
+                    AddScore();
+                    break;
+                }
+                case Option.RemoveScore:
+                {
+                    break;
+                }
+                case Option.SearchScore:
+                {
+                    break;
+                }
+                case Option.DisplayScore:
+                {
+                    break;
+                }
+            }
+        } while (choice >= 1 && choice <= 5);
     }
 }
