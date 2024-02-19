@@ -69,7 +69,6 @@ public class ScoreManagement
             Console.WriteLine($"Error Creating New Score Board: {ex.Message}");
         }
     }
-
 public static void AddScore()
 {
     Console.WriteLine("Enter ID Subject: ");
@@ -99,51 +98,40 @@ public static void AddScore()
         if (partialName.ToString().Equals(foundFile.Name))
         {
             check = true;
-            int numberOfLines = CountLinesFromLine(filePath, 6);
-            // Kiểm tra nếu có đủ dòng
-            if (File.ReadLines(filePath).Skip(4).Any())
+            int numberOfLines = CountLinesFromLine(filePath, 7);
+            string line = File.ReadLines(filePath).Skip(4).First();
+            string[] parts = line.Split('|');
+            var quantity = Convert.ToInt32(parts[1]);
+            line = File.ReadLines(filePath).Skip(2).First();
+            parts = line.Split('|');
+            var processCoefficient = Convert.ToDouble(parts[1]);
+            Console.WriteLine($"There are {quantity - numberOfLines - 1} students who do not have scores yet.");
+            Console.WriteLine("Enter the number student to add Score: ");
+            var number = Convert.ToInt32(Console.ReadLine());
+            if (numberOfLines == 0 && number < quantity || numberOfLines != 0 && number < quantity - numberOfLines)
             {
-                string line = File.ReadLines(filePath).Skip(4).First();
-                string[] parts = line.Split('|');
-                int quantity = Convert.ToInt32(parts[1]);
-                line = File.ReadLines(filePath).Skip(2).First();
-                parts = line.Split('|');
-                double processCoefficient = Convert.ToDouble(parts[1]);
-                Console.WriteLine("Enter the number student to add Score: ");
-                int number = Convert.ToInt32(Console.ReadLine());
-                if (numberOfLines == 0 && number < quantity || numberOfLines != 0 && number < quantity - numberOfLines)
+                using (var stream = new FileStream(filePath, FileMode.Append))
+                using (var writer = new StreamWriter(stream))
                 {
-                    // Mở tệp tin ở ngoài vòng lặp
-                    using (var stream = new FileStream(filePath, FileMode.Append))
-                    using (var writer = new StreamWriter(stream))
+                    for (var i = 0; i < number; i++)
                     {
-                        for (int i = 0; i < number; i++)
-                        {
-                            StudentScore student = new StudentScore();
-                            student.Input();
-                            writer.WriteLine(student.GetMarkLine(processCoefficient));
-                        }
-                    } // Đóng tệp tin khi hoàn thành ghi
-                }
-                else
-                {
-                    Console.WriteLine("Class is Full.");
-                }
+                        StudentScore student = new StudentScore();
+                        student.Input();
+                        writer.WriteLine(student.GetMarkLine(processCoefficient));
+                    }
+                } 
             }
             else
             {
-                Console.WriteLine("File does not have enough lines.");
+                Console.WriteLine("The class is full or there are not enough seats.");
             }
         }
     }
-
-    if (check == false)
+    if (!check)
     {
         Console.WriteLine("File Not Exist.");
     }
 }
-
-
     public static void Main(string[] args)
     {
         int choice;
