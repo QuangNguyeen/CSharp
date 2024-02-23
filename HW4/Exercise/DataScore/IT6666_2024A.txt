@@ -1,0 +1,4 @@
+SubjectID|IT6666
+Subject|CSharp
+F|30|70
+StudentCount|30

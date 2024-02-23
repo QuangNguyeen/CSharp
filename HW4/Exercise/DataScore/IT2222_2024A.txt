@@ -1,0 +1,4 @@
+SubjectID|IT2222
+Subject|Java
+F|40|60
+StudentCount|30

@@ -1,0 +1,4 @@
+SubjectID|IT4650
+Subject|PYTHON
+F|30|70
+StudentCount|20
