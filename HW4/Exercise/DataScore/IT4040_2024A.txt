@@ -1,4 +1,0 @@
-SubjectID|IT4040
-Subject|Java
-F|30|70
-StudentCount|0
