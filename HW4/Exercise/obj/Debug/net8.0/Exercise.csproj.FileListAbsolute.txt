@@ -1,0 +1,14 @@
+/Users/macbook/Documents/C#/HW4/Exercise/bin/Debug/net8.0/Exercise
+/Users/macbook/Documents/C#/HW4/Exercise/bin/Debug/net8.0/Exercise.deps.json
+/Users/macbook/Documents/C#/HW4/Exercise/bin/Debug/net8.0/Exercise.runtimeconfig.json
+/Users/macbook/Documents/C#/HW4/Exercise/bin/Debug/net8.0/Exercise.dll
+/Users/macbook/Documents/C#/HW4/Exercise/bin/Debug/net8.0/Exercise.pdb
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/Exercise.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/Exercise.AssemblyInfoInputs.cache
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/Exercise.AssemblyInfo.cs
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/Exercise.csproj.CoreCompileInputs.cache
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/Exercise.dll
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/refint/Exercise.dll
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/Exercise.pdb
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/Exercise.genruntimeconfig.cache
+/Users/macbook/Documents/C#/HW4/Exercise/obj/Debug/net8.0/ref/Exercise.dll

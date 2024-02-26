@@ -1,0 +1,11 @@
+IT4040_2024A_rp.txt
+The student with the highest mark is: NGUYEN VAN           QUANG     
+The student with the lowest mark is: NGUYEN VAN           QUANG     
+The average mark is: 9
+
+A histogram of the subject IT4040 is:
+A:*
+B:
+C:
+D:
+F:

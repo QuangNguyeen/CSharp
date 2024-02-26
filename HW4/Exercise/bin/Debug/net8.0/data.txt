@@ -1,0 +1,5 @@
+SubjectID|IT3080
+Subject|Java
+F|30|70
+ing
+F|70|0

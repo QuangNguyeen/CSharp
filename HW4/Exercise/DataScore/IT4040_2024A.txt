@@ -1,0 +1,5 @@
+SubjectID|IT4040
+Subject|Java Programming
+F|30|70
+StudentCount|30
+S|2251172466|NGUYEN VAN          |QUANG     |9  |9  |A|
