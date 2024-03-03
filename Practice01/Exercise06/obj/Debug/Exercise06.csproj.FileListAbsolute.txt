@@ -1,0 +1,10 @@
+C:\Users\Mac\source\repos\Practice01\Exercise06\bin\Debug\Exercise06.exe.config
+C:\Users\Mac\source\repos\Practice01\Exercise06\bin\Debug\Exercise06.exe
+C:\Users\Mac\source\repos\Practice01\Exercise06\bin\Debug\Exercise06.pdb
+C:\Users\Mac\source\repos\Practice01\Exercise06\obj\Debug\Exercise06.csproj.AssemblyReference.cache
+C:\Users\Mac\source\repos\Practice01\Exercise06\obj\Debug\Exercise06.Form1.resources
+C:\Users\Mac\source\repos\Practice01\Exercise06\obj\Debug\Exercise06.Properties.Resources.resources
+C:\Users\Mac\source\repos\Practice01\Exercise06\obj\Debug\Exercise06.csproj.GenerateResource.cache
+C:\Users\Mac\source\repos\Practice01\Exercise06\obj\Debug\Exercise06.csproj.CoreCompileInputs.cache
+C:\Users\Mac\source\repos\Practice01\Exercise06\obj\Debug\Exercise06.exe
+C:\Users\Mac\source\repos\Practice01\Exercise06\obj\Debug\Exercise06.pdb
