@@ -1,0 +1,10 @@
+C:\Users\Mac\source\repos\Practice01\Exercise02\bin\Debug\Exercise02.exe.config
+C:\Users\Mac\source\repos\Practice01\Exercise02\bin\Debug\Exercise02.exe
+C:\Users\Mac\source\repos\Practice01\Exercise02\bin\Debug\Exercise02.pdb
+C:\Users\Mac\source\repos\Practice01\Exercise02\obj\Debug\Exercise02.csproj.AssemblyReference.cache
+C:\Users\Mac\source\repos\Practice01\Exercise02\obj\Debug\Exercise02.Properties.Resources.resources
+C:\Users\Mac\source\repos\Practice01\Exercise02\obj\Debug\Exercise02.csproj.GenerateResource.cache
+C:\Users\Mac\source\repos\Practice01\Exercise02\obj\Debug\Exercise02.csproj.CoreCompileInputs.cache
+C:\Users\Mac\source\repos\Practice01\Exercise02\obj\Debug\Exercise02.exe
+C:\Users\Mac\source\repos\Practice01\Exercise02\obj\Debug\Exercise02.pdb
+C:\Users\Mac\source\repos\Practice01\Exercise02\obj\Debug\Exercise02.frmMain.resources
