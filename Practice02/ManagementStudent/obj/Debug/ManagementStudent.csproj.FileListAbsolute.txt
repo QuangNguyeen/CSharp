@@ -1,0 +1,11 @@
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\bin\Debug\ManagementStudent.exe.config
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\bin\Debug\ManagementStudent.exe
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\bin\Debug\ManagementStudent.pdb
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\obj\Debug\ManagementStudent.csproj.AssemblyReference.cache
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\obj\Debug\ManagementStudent.Form1.resources
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\obj\Debug\ManagementStudent.Properties.Resources.resources
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\obj\Debug\ManagementStudent.csproj.GenerateResource.cache
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\obj\Debug\ManagementStudent.csproj.CoreCompileInputs.cache
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\obj\Debug\ManagementStudent.exe
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\obj\Debug\ManagementStudent.pdb
+C:\Users\Mac\source\repos\Practice02\Practice02\ManagementStudent\obj\Debug\ManagementStudent.FormSearch.resources
