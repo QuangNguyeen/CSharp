@@ -1,0 +1,10 @@
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\bin\Debug\QuangLyBanHang.exe.config
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\bin\Debug\QuangLyBanHang.exe
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\bin\Debug\QuangLyBanHang.pdb
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\obj\Debug\QuangLyBanHang.csproj.AssemblyReference.cache
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\obj\Debug\QuangLyBanHang.Form1.resources
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\obj\Debug\QuangLyBanHang.Properties.Resources.resources
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\obj\Debug\QuangLyBanHang.csproj.GenerateResource.cache
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\obj\Debug\QuangLyBanHang.csproj.CoreCompileInputs.cache
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\obj\Debug\QuangLyBanHang.exe
+C:\Users\Mac\source\repos\Practice02\Practice02\QuangLyBanHang\obj\Debug\QuangLyBanHang.pdb
