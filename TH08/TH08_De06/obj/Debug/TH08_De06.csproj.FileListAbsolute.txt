@@ -1,0 +1,10 @@
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\bin\Debug\TH08_De06.exe.config
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\bin\Debug\TH08_De06.exe
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\bin\Debug\TH08_De06.pdb
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\obj\Debug\TH08_De06.csproj.AssemblyReference.cache
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\obj\Debug\TH08_De06.Form1.resources
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\obj\Debug\TH08_De06.Properties.Resources.resources
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\obj\Debug\TH08_De06.csproj.GenerateResource.cache
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\obj\Debug\TH08_De06.csproj.CoreCompileInputs.cache
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\obj\Debug\TH08_De06.exe
+C:\Users\Mac\source\repos\Practice02\TH08\TH08_De06\obj\Debug\TH08_De06.pdb
